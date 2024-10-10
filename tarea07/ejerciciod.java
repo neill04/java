@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 
 public class ejerciciod  extends JFrame implements ActionListener {
     // Modifique el ejemplo 9 usando tres botones para una creación suya
+    
     // Creacion de tres botones
     JButton boton1;
     JButton boton2;
