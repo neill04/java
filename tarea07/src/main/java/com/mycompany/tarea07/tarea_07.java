@@ -7,55 +7,28 @@ package com.mycompany.tarea07;
 import javax.swing.JOptionPane;
 
 public class tarea_07 {
-    // Crea un programa que pida nro. 1 a 12 con JOptionPane imprima el 
-    // nombre del mes, usar try catch y switch();
     String mensaje;
     public tarea_07() {
-        String valorCadena = JOptionPane.showInputDialog(null, "Ingrese un numero del 1 al 12: ");
+        // Crear un programa que capture tres números con JOptionPane y 
+        // determine el menor, usar try cath, if, etc
+        String valorCadena = JOptionPane.showInputDialog(null, "Ingrese un numero: ");
+        String valorCadena1 = JOptionPane.showInputDialog(null, "Ingrese un numero: ");
+        String valorCadena2 = JOptionPane.showInputDialog(null, "Ingrese un numero: ");
         try {
-            int numero = Integer.parseInt(valorCadena);
-            switch(numero) {
-                case 1:
-                    mensaje = "Enero";
-                    break;
-                case 2:
-                    mensaje = "Febrero";
-                    break;
-                case 3:
-                    mensaje = "Marzo";
-                    break;
-                case 4:
-                    mensaje = "Abril";
-                    break;
-                case 5:
-                    mensaje = "Mayo";
-                    break;
-                case 6:
-                    mensaje = "Junio";
-                    break;
-                case 7:
-                    mensaje = "Julio";
-                    break;
-                case 8:
-                    mensaje = "Agosto";
-                    break;
-                case 9:
-                    mensaje = "Septiembre";
-                    break;
-                case 10:
-                    mensaje = "Octubre";
-                    break;
-                case 11:
-                    mensaje = "Noviembre";
-                    break;
-                case 12:
-                    mensaje = "Diciembre";
-                    break;
+            int num = Integer.parseInt(valorCadena);
+            int num2 = Integer.parseInt(valorCadena1);
+            int num3 = Integer.parseInt(valorCadena2);
+            
+            if (num < num2 && num < num3) {
+                mensaje = "El menor es " + num;
+            } else if (num2 < num && num2 < num3) {
+                mensaje = "El menor es " + num2;
+            } else {
+                mensaje = "El menor es " + num3;
             }
-        } catch(NumberFormatException ex) {
-            mensaje = "No digitaste un nro. entre 1 y 12";
+        } catch (NumberFormatException ex) {
+            mensaje = "No digitaste tres numeros. ";
         }
         JOptionPane.showMessageDialog(null, mensaje);
     }        
 }
-
